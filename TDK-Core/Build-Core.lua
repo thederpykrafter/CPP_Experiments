@@ -1,11 +1,17 @@
-project "Core"
+project "TDK-Core"
    kind "StaticLib"
    language "C++"
    cppdialect "C++20"
    targetdir "Binaries/%{cfg.buildcfg}"
    staticruntime "off"
 
-   files { "Source/**.h", "Source/**.cpp" }
+   files 
+   { 
+    "Source/**.h", 
+   "Source/**.cpp", 
+   "Source/**.hpp", 
+   "Source/**.c" 
+   }
 
    includedirs
    {

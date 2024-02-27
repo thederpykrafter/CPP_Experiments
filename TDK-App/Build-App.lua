@@ -1,23 +1,29 @@
-project "App"
+project "TDK-App"
    kind "ConsoleApp"
    language "C++"
    cppdialect "C++20"
    targetdir "Binaries/%{cfg.buildcfg}"
    staticruntime "off"
 
-   files { "Source/**.h", "Source/**.cpp" }
+   files 
+   { 
+    "Source/**.h", 
+   "Source/**.cpp", 
+   "Source/**.hpp", 
+   "Source/**.c" 
+   }
 
    includedirs
    {
       "Source",
 
 	  -- Include Core
-	  "../Core/Source"
+	  "../TDK-Core/Source"
    }
 
    links
    {
-      "Core"
+      "TDK-Core"
    }
 
    targetdir ("../Binaries/" .. OutputDir .. "/%{prj.name}")
